@@ -22,4 +22,6 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get autoremove -y ; rm -rf /var/lib/apt/lists/*
 
 # setup & start server
-CMD ["./setup.sh"]
+RUN chmod +x ./docker-entrypoint.sh
+ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["apache2-foreground"]

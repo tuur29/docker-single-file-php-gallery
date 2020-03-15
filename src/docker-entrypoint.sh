@@ -15,5 +15,4 @@ if [ "$ADMIN" != "" ]; then
     sed -ri -e "s|'ADMIN', FALSE|'ADMIN', ${ADMIN}|g" ./index.php
 fi
 
-# start server
-apache2-foreground
+exec "$@"
