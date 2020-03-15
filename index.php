@@ -10,6 +10,7 @@
 		Released: 19-Dec-2018
 		http://sye.dk/sfpg/
 		by Kenny Svalgaard
+		edited by Tuur Lievens
 
 	*/
 
@@ -17,7 +18,7 @@
 	
 	//	----------- CONFIGURATION START ------------
 
-	define('GALLERY_ROOT', './');
+	define('GALLERY_ROOT', './data/');
 	define('DATA_ROOT', './_sfpg_data/');
 	define('SECURITY_PHRASE', '');
 	define('PASSWORD', '');
