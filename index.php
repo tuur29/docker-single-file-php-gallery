@@ -280,6 +280,20 @@
 
 	$color_overlay = '#000000';
 
+	// Add around line 3665
+	$EXTRA_STYLES = "
+
+		.sye { display: none; }
+
+	";
+
+	// Add around line 3771
+	$EXTRA_SCRIPTS = "
+
+
+
+	";
+
 	//	----------- CONFIGURATION END ------------
 
 	function sfpg_array_sort(&$arr, &$arr_time, $sort_by_time, $sort_reverse)
@@ -3660,6 +3674,7 @@
 		-webkit-overflow-scrolling:touch;
 	}
 	".
+	$EXTRA_STYLES.
 	'</style>';
 	sfpg_javascript();
 	echo '</head>';
@@ -3765,6 +3780,7 @@
 		echo'<div id="box_overlay" class="box_overlay"></div>' .
 		'<div id="box_left" onclick="cycleImg(-1)" onmouseover="gebi(\'button_left\').className=\'sfpg_button_hover\'" onmouseout="gebi(\'button_left\').className=\'sfpg_button\'" class="box_hud"></div>' .
 		'<div id="box_right" onclick="cycleImg(1)" onmouseover="gebi(\'button_right\').className=\'sfpg_button_hover\'" onmouseout="gebi(\'button_right\').className=\'sfpg_button\'" class="box_hud"></div>' .
+		'<script>'.$EXTRA_SCRIPTS.'</script>'.
 		'</body>';
 	}
 	echo '</html>';
